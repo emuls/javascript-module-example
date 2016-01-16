@@ -15,16 +15,14 @@
         </script>
     </head>
     <body>
-        <h1>JS Module Demo</h1>
-        <p>Just messing around with js modules and loaders</p>
+        <h1>JS Module Loader Demo</h1>
+        <p>This example app defines a few modules and shows how to load them different modules loaders</p>
+        <p>Two pages are available, one loads modules with SystemJS, the other with Require</p>
         <div>
-            <input type="button" onclick="htm.setHtml('html_block', 'CHANGED!')" value="Change HTML!" />
-            <div id="html_block">
-                I am a block of HTML, click the button above to change me!
-            </div>
+            <a href="system.html">SystemJS example</a>
         </div>
         <div>
-            <input type="button" onclick="exa.exAlert('HEY THERE')" value="Show EXAlert" />
+            <a href="require.html">RequireJS example</a>
         </div>
     </body>
 </html>
