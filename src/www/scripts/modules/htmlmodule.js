@@ -1,5 +1,8 @@
-exports = function() {
-    function setHtml(id, html) {
-        $('#' + id).html(html);
-    }
-}
+define('htm', function(){
+    var module = {
+        setHtml: function(id, message){
+            $('#' + id).html(message);
+        }
+    };
+    return module;
+});
