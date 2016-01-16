@@ -1,7 +1,19 @@
 <html>
-    <head></head>
+    <head>
+        <script src="scripts/system.js"></script>
+        <script>
+            System.baseURL = 'scripts';
+            System.paths['jquery'] = '//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js';
+            System.import('jquery')
+            System.import('alertmodule.js')
+        </script>
+    </head>
     <body>
-        <h1>Basic Node Server</h1>
-        <p>Hello, this is a basic node server application</p>
+        <h1>JS Module Demo</h1>
+        <p>Just messing around with js modules and loaders</p>
+        <input type="button" onclick="changehtml()" value="Change HTML!" />
+        <div id="html_block">
+            I am a block of HTML, click the button above to change me!
+        </div>
     </body>
 </html>
