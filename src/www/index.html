@@ -4,11 +4,12 @@
         <script>
             System.baseURL = 'scripts/modules';
             System.paths['jquery'] = '//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js';
+            System.defaultJSExtensions = true;
             System.import('jquery');
-            System.import('alertmodule.js').then(function(exa){
+            System.import('alertmodule').then(function(exa){
                 window.exa = exa;
             });
-            System.import('htmlmodule.js').then(function(htm){
+            System.import('htmlmodule').then(function(htm){
                window.htm = htm;
             });
         </script>
@@ -23,7 +24,7 @@
             </div>
         </div>
         <div>
-            <input type="button" onclick="exa.exAlert('HEY THERE')" value="Show EAlert" />
+            <input type="button" onclick="exa.exAlert('HEY THERE')" value="Show EXAlert" />
         </div>
     </body>
 </html>
