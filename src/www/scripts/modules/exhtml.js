@@ -1,4 +1,4 @@
-define(['exalert'], function(exalert){
+define(['jquery','exalert'], function($,exalert){
     var module = {
         setHtml: function(id, message){
             $('#' + id).html(message);

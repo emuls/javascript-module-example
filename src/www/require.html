@@ -1,18 +1,21 @@
-<html>
-<head>
-    <script src="scripts/system.js"></script>
-
-</head>
-<body>
-<h1>Require Module Page</h1>
-<div>
-    <input type="button" onclick="htm.setHtml('html_block', 'CHANGED!')" value="Change HTML!" />
-    <div id="html_block">
-        I am a block of HTML, click the button above to change me!
-    </div>
-</div>
-<div>
-    <input type="button" onclick="exa.exAlert('HEY THERE')" value="Show EXAlert" />
-</div>
-</body>
+<html ng-app="moduleApp">
+    <head>
+        <script data-main="requireloader.js" src="scripts/libs/require.js"></script>
+    </head>
+    <body>
+        <h1>RequireJS Module Page</h1>
+        <h2>Basic module examples</h2>
+        <div>
+            <input type="button" onclick="htm.setHtml('html_block', 'CHANGED!')" value="Change HTML!" />
+            <div id="html_block">
+                I am a block of HTML, click the button above to change me!
+            </div>
+        </div>
+        <div>
+            <input type="button" onclick="exa.exAlert('HEY THERE')" value="Show EXAlert" />
+        </div>
+        <h2>Angular module example</h2>
+        <div style="font-size:1.5em"make-blue>I should be blue</div>
+        <exaclick-button></exaclick-button>
+    </body>
 </html>
