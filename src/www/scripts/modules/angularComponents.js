@@ -1,4 +1,4 @@
-define(['angular', 'angularBlue','angularClick'],function(angular, angularBlue,angularClick) {
+define(['angular', 'angularBlue','angularClick'],function(angular, angularBlue, angularClick) {
     console.log('angular components loaded');
     angular.module('moduleApp', []);
     angular.module('moduleApp').directive('makeBlue', angularBlue.directive);
