@@ -21,4 +21,6 @@ require(['exalert','exhtml'], function (exa,htm) {
 });
 
 console.log('requiring angular components');
-require(['angularComponents']);
+require(['angularComponents'], function(){
+    $('#jqtest').html('JQuery has been loaded');
+});
