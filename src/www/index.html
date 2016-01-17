@@ -1,18 +1,5 @@
-<html>
+<html ng-app="moduleApp">
     <head>
-        <script src="scripts/system.js"></script>
-        <script>
-            System.baseURL = 'scripts/modules';
-            System.paths['jquery'] = '//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js';
-            System.defaultJSExtensions = true;
-            System.import('jquery');
-            System.import('exalert').then(function(exa){
-                window.exa = exa;
-            });
-            System.import('exhtml').then(function(htm){
-               window.htm = htm;
-            });
-        </script>
     </head>
     <body>
         <h1>JS Module Loader Demo</h1>
