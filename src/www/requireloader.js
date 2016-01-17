@@ -19,11 +19,6 @@ require(['exalert','exhtml'], function (exa,htm) {
     window.exa = exa;
     window.htm = htm;
 });
-require(['exalert'], function (exa,htm) {
-    console.log('ex modules loaded');
-    window.exa = exa;
-    window.htm = htm;
-});
 
 console.log('requiring angular components');
 require(['angularComponents']);
