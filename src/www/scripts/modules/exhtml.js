@@ -1,4 +1,4 @@
-define('exhtml', ['jquery','exalert'], function($,exalert){
+define('modules/exhtml', ['jquery','modules/exalert'], function($,exalert){
     var module = {
         setHtml: function(id, message){
             $('#' + id).html(message);
