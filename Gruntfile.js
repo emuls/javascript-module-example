@@ -9,6 +9,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-systemjs-builder');
+    grunt.loadNpmTasks('grunt-contrib-requirejs');
 
     grunt.initConfig({
         watch: {
@@ -62,8 +63,29 @@ module.exports = function (grunt) {
                     'dest': 'DIST/scripts/system/app.js'
                 }]
             }
+        },
+        requirejs: {
+            compile: {
+                options: {
+                    baseUrl: './',
+                    optimize: 'none',
+                    paths: {
+                        jquery: '//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min',
+                        angular: '//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min'
+                    },
+                    shim: {
+                        "jquery": { exports: "$" },
+                        "angular" : {
+                            exports : "angular",
+                            deps: ["jquery"]
+                        }
+                    },
+                    name: 'BUILD/intermediate/scripts/modules.js',
+                    out: 'DIST/scripts/require/app.js'
+                }
+            }
         }
     });
     // the default task (running "grunt" in console) is "watch"
-    grunt.registerTask('default', ['clean','copy','concat', 'systemjs']);
+    grunt.registerTask('default', ['clean','copy','concat', 'systemjs','requirejs']);
 };
