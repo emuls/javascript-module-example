@@ -1,4 +1,4 @@
-define(['exalert'],function(exalert){
+define('angularClick',['exalert'],function(exalert){
     var module = {
         directive: function(){
             return {

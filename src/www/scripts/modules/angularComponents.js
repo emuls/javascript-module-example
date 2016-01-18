@@ -1,4 +1,4 @@
-define(['angular', 'angularBlue','angularClick'],function(angular, angularBlue, angularClick) {
+define('angularComponents',['angular', 'angularBlue','angularClick'],function(angular, angularBlue, angularClick) {
     console.log('angular components loaded');
     console.log('ng: ' + !!angular);
     console.log('blue: ' + !!angularBlue);

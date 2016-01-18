@@ -1,4 +1,4 @@
-define([],function(){
+define('angularBlue', [],function(){
     var module = {
         directive: function(){
             return {
