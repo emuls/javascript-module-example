@@ -30,13 +30,8 @@ module.exports = function (grunt) {
                 expand: true           // required when using cwd
             },
             loaders: {
-                options: {
-                    flatten: true
-                },
-                loaders: {
-                    'src/www/scripts/loaders/requireloader.dist.js': 'DIST/scripts/loaders/requireloader.js',
-                    'src/www/scripts/loaders/systemloader.dist.js': 'DIST/scripts/loaders/systemloader.js',
-                }
+                'src/www/scripts/loaders/requireloader.dist.js': 'DIST/scripts/loaders/requireloader.js',
+                'src/www/scripts/loaders/systemloader.dist.js': 'DIST/scripts/loaders/systemloader.js'
             }
         },
         concat: {
