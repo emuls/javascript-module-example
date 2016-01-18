@@ -29,11 +29,13 @@ module.exports = function (grunt) {
                 dest: 'DIST/scripts/libs',    // destination folder
                 expand: true           // required when using cwd
             },
-            loaders : {
-                cwd: 'src/www/scripts/loaders',  // set working folder / root to copy
-                src: '**/*',           // copy all files and subfolders
-                dest: 'DIST/scripts/loaders',    // destination folder
-                expand: true
+            requireloader : {
+                src: 'src/www/scripts/loaders/requireloader.dist.js',           // copy all files and subfolders
+                dest: 'DIST/scripts/loaders/requireloader.js',    // destination folder
+            },
+            systemloader : {
+                src: 'src/www/scripts/loaders/systemloader.dist.js',           // copy all files and subfolders
+                dest: 'DIST/scripts/loaders/systemloader.js',    // destination folder
             }
         },
         concat: {
@@ -57,7 +59,7 @@ module.exports = function (grunt) {
             dist: {
                 files: [{
                     'src':  'BUILD/intermediate/scripts/modules.js',
-                    'dest': 'DIST/scripts/app.js'
+                    'dest': 'DIST/scripts/system/app.js'
                 }]
             }
         }
